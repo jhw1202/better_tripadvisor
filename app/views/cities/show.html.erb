@@ -1,0 +1,9 @@
+<h1>Reviews for <%= @city.name %></h1>
+
+<ul>
+  <% @reviews.each do |review| %>
+   <li><h3><%= link_to review.title, review.link %></h3><li>
+   <%= review.num_of_reviews %>
+   <%= review.average %>
+  <% end %>
+</ul>
