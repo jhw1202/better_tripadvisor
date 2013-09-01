@@ -1,3 +1,4 @@
+<% provide :title, "Home" %>
 <% @cities.each do |city| %>
   <%= link_to city.name, city_path(city) %>
 <% end %>
