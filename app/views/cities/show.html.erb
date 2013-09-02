@@ -3,8 +3,13 @@
 
 <ul>
   <% @reviews.each do |review| %>
-   <li><h3><%= link_to review.title, review.link %></h3><li>
-   <%= review.num_of_reviews %>
-   <%= review.average %>
+    <li><h3><%= link_to review.title, review.link %></h3><li>
+    <%= review.num_of_reviews %>
+    <%= review.average %>
+    <% if review.data.length != 0 %>
+      <% review.data.each do |key, val| %>
+       <li><%= val %></li>
+      <% end %>
+    <% end %>
   <% end %>
 </ul>
